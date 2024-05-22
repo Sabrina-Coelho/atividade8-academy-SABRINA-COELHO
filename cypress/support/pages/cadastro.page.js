@@ -2,8 +2,8 @@ export default class CadastroPage {
     inputNome = 'input[placeholder="Nome"]';
     inputEmail = 'input[placeholder="E-mail"]';
     inputSenha = 'input[placeholder="Senha"]';
-    inputConfirmarSenha = 'input[placeholder="Confirmar Senha"]';
-    buttonCadastrar = 'button[type="submit"]';
+    inputConfirmarSenha = 'input[placeholder="Confirmar senha"]';
+    buttonCadastrar = 'button[class="account-save-button"]';
 
     typeNome(nome) {
         cy.get(this.inputNome).type(nome);

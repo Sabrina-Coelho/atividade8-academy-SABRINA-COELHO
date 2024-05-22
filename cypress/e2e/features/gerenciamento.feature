@@ -11,8 +11,8 @@ Então tenho acesso aos dados da conta
 E posso realizar a edição de informações
 
 Cenário: Um usuário não autenticado não pode acessar a edição de informações
-Dado que não realizei o Login
-Quando acesso a página inicial
+Dado acessei a página inicial
+Quando não realizo o login
 Então não tenho acesso à página Perfil
 
 Cenário: Um usuário comum pode alterar apenas as próprias informações
@@ -26,16 +26,17 @@ Dado que realizei o cadastro de um usuário
 E realizei o login do usuário
 Quando acesso a página Perfil
 E clico em Gerenciar Conta
-E clico no botão de edição
-Então consigo alterar meu nome para "Alteração"
-E as mensagens "Sucesso" e "Informações atualizadas!" são exibidas
+E altero meu nome para "Alteração"
+E clico no botão Salvar
+Então as mensagens "Sucesso" e "Informações atualizadas!" são exibidas
+
 
 Cenário: É possível alterar a própria senha
 Dado que realizei o cadastro de um usuário
 E realizei o login do usuário
 Quando acesso a página Perfil
 E clico em Gerenciar Conta
-E clico no botão de edição
+E clico no botão Alterar Senha
 E preencho os campos Senha e Confirmar Senha com dados válidos
 E clico no botão Salvar
 Então as mensagens "Sucesso" e "Informações atualizadas!" são exibidas
@@ -45,7 +46,7 @@ Dado que realizei o cadastro de um usuário
 E realizei o login do usuário
 Quando acesso a página Perfil
 E clico em Gerenciar Conta
-E clico no botão de edição
+E clico no botão Alterar Senha
 E preencho apenas o campo de Senha
 E clico no botão Salvar
 Então a mensagem "As senhas devem ser iguais." é exibida

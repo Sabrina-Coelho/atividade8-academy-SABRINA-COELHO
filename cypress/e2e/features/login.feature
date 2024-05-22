@@ -4,9 +4,9 @@ Funcionalidade: Login Usuário
 
 Cenário: Login deve ser realizado com sucesso
 Dado que realizei o cadastro de um usuário
-E acessei a funcionalidade de Login
+E que acessei a funcionalidade de Login
 Quando informo o e-mail cadastrado
-E a senha cadastrada
+E informo a senha cadastrada
 E clico no botão Login
 Então sou redirecionado para a página inicial
 E tenho acesso às informações do meu perfil
@@ -16,6 +16,7 @@ Dado que realizei o cadastro de um usuário
 E que acessei a funcionalidade de Login
 Quando informo um e-mail não cadastrado
 E informo a senha cadastrada
+E clico no botão Login
 Então as mensagens "Falha ao autenticar" e "Usuário ou senha inválidos." são exibidas
 
 Cenário: E-mail em branco deve dar erro
@@ -23,6 +24,7 @@ Dado que realizei o cadastro de um usuário
 E que acessei a funcionalidade de Login
 Quando informo a senha cadastrada
 E não preencho o campo E-mail
+E clico no botão Login
 Então a mensagem "Informe o e-mail" é exibida
 
 Cenário: Senha em branco deve dar erro
@@ -30,10 +32,13 @@ Dado que realizei o cadastro de um usuário
 E que acessei a funcionalidade de Login
 Quando informo o e-mail cadastrado
 E não preencho o campo Senha
+E clico no botão Login
 Então a mensagem "Informe a senha" é exibida
 
 Cenário: Senha incorreta deve dar erro
-Dado que acessei a funcionalidade de Login
-Quando informo um e-mail cadastrado
+Dado que realizei o cadastro de um usuário
+E que acessei a funcionalidade de Login
+Quando informo o e-mail cadastrado
 E informo uma senha não cadastrada
+E clico no botão Login
 Então as mensagens "Falha ao autenticar" e "Usuário ou senha inválidos." são exibidas

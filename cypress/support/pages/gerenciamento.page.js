@@ -3,8 +3,9 @@ export default class GerenciamentoPage {
     inputEmail = 'input[placeholder="E-mail"]';
     inputSenha = 'input[placeholder="Senha"]';
     inputConfirmarSenha = 'input[placeholder="Confirmar senha"]';
-    buttonSalvar = 'button[type="submit"]';
-    buttonGerenciarConta = 'button[href="account"]';
+    buttonSalvar = 'button[class="account-save-button"]';
+    buttonAlterarSenha = 'button[class="account-password-button"]';
+    linkGerenciarConta = 'a[href="/account"]';
 
     typeNome(nome) {
         cy.get(this.inputNome).type(nome);
@@ -26,7 +27,11 @@ export default class GerenciamentoPage {
         cy.get(this.buttonSalvar).click(); 
     }
 
-    clickButtonGerenciarConta() {
-        cy.get(this.buttonGerenciarConta).click(); 
+    clickButtonAlterarSenha() {
+        cy.get(this.buttonAlterarSenha).click();
+    }
+
+    clickLinkGerenciarConta() {
+        cy.get(this.linkGerenciarConta).click(); 
     }
 }
